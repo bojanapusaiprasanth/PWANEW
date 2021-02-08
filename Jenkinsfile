@@ -107,6 +107,8 @@ pipeline {
       }
       steps {
         script {
+          def mavenPom = readMavenPom file: 'pom.xml'
+          sh "docker-compose build --build-arg POMVERSION=${mavenPom.version}"
           sh 'docker-compose up -d'
         }
       }
