@@ -108,7 +108,7 @@ pipeline {
       steps {
         script {
           def mavenPom = readMavenPom file: 'pom.xml'
-          sh "docker build -t 'Jenkinsbuildpwaimage' --build-arg POMVERSION=${mavenPom} ."
+          sh "docker build -t 'jenkinsbuildpwaimage' --build-arg POMVERSION=${mavenPom} ."
           sh 'docker-compose up -d'
         }
       }
