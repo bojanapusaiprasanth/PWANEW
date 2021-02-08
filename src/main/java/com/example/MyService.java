@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyService {
 
-	@RequestMapping("/Hello")
+	@RequestMapping("/pwa")
 	public String hello()
 	{
-		return "Hello";
+		return "This is PWA application";
 	}
 	
 }

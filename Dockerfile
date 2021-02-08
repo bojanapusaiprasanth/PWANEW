@@ -2,12 +2,12 @@ FROM openjdk:8-alpine
 
 LABEL Maintainer Saiprasanth981
 
-COPY demo-0.0.1-SNAPSHOT.jar /usr/app/
+COPY target/pwa*.jar /usr/app/
 
 WORKDIR /usr/app/
 
 
-EXPOSE 8082
+EXPOSE 8081
 
 
-#ENTRYPOINT ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "pwa*.jar"]
