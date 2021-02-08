@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   pwa:
-    build: .
+    image: "jenkinsbuildpwaimage:latest"
     container_name: "pwabuiltbyjenkins"
     ports:
       - "8081:8081"
