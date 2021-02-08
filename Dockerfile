@@ -8,7 +8,7 @@ ARG POMVERSION
 
 LABEL Maintainer Saiprasanth981
 
-COPY target/pwa-"${POMVERSION}".jar /usr/app/
+COPY ./target/pwa-"${POMVERSION}".jar /usr/app/
 
 WORKDIR /usr/app/
 
